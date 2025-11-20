@@ -1,0 +1,486 @@
+/*
+   Product Detail Page Styles
+ */
+
+/* Ensure product images are always visible on product detail page */
+#product_detail_main .o_wsale_product_images {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Product Image Container */
+#product_detail_main .o_wsale_product_images {
+    min-height: 300px;
+}
+
+/* Product Detail Image - Carousel */
+#product_detail_main #o-carousel-product {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 300px;
+}
+
+#product_detail_main #o-carousel-product .carousel-inner {
+    min-height: 300px;
+}
+
+/* Product Detail Image - Grid */
+#product_detail_main #o-grid-product {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Product Detail Image - Single Image */
+#product_detail_main .product_detail_img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ensure image wrapper is visible */
+#product_detail_main .o_img_with_max_suggested_width {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 300px;
+}
+
+/* Carousel outer container */
+#product_detail_main .o_carousel_product_outer {
+    min-height: 300px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel items */
+#product_detail_main .carousel-item {
+    min-height: 300px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+#product_detail_main .carousel-item.active {
+    display: flex !important;
+}
+
+/* Product images in carousel */
+#product_detail_main .carousel-item img,
+#product_detail_main .product_detail_img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block !important;
+}
+
+/* Fallback for when images might be hidden by website settings */
+#product_detail_main .col-lg-6:first-child,
+#product_detail_main .col-lg-5:first-child,
+#product_detail_main .col-lg-4:first-child,
+#product_detail_main .col-lg-8:first-child {
+    display: block !important;
+}
+
+/* Ensure product image column is visible even if setting is 'none' */
+#product_detail_main [class*="col-lg-"][class*="o_wsale_product_images"] {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    #product_detail_main .o_wsale_product_images {
+        min-height: 250px;
+        margin-bottom: 2rem;
+    }
+
+    #product_detail_main #o-carousel-product {
+        min-height: 250px;
+    }
+
+    #product_detail_main .o_carousel_product_outer {
+        min-height: 250px;
+    }
+
+    #product_detail_main .carousel-item {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    #product_detail_main .o_wsale_product_images {
+        min-height: 200px;
+    }
+
+    #product_detail_main #o-carousel-product {
+        min-height: 200px;
+    }
+
+    #product_detail_main .o_carousel_product_outer {
+        min-height: 200px;
+    }
+
+    #product_detail_main .carousel-item {
+        min-height: 200px;
+    }
+}
+
+/*
+   Product Details Section (Right Side)
+  */
+
+/* Product Details Container - Aligned with image height */
+#product_detail_main #product_details {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Product Title - Bold, clean font with larger size */
+#product_detail_main #product_details h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.25rem;
+    text-align: left;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* Product Price - Deep green, larger font weight, good spacing from title */
+#product_detail_main #product_details .product_price {
+    text-align: left;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+#product_detail_main #product_details .product_price .oe_price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #28a745;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+#product_detail_main #product_details .product_price .oe_price .oe_currency_value {
+    color: #28a745;
+}
+
+#product_detail_main #product_details .product_price .oe_default_price {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-left: 0.75rem;
+    font-weight: 400;
+}
+
+/* Quantity Selector and Add to Cart Container - Subtle vertical spacing */
+#product_detail_main #product_details #add_to_cart_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Quantity Selector - Modern, minimal with soft borders */
+#product_detail_main #product_details .css_quantity {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#product_detail_main #product_details .css_quantity.input-group {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+#product_detail_main #product_details .css_quantity .btn-link {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #6b7280;
+    text-decoration: none;
+    padding: 0;
+    flex-shrink: 0;
+    margin: 0 0.125rem;
+}
+
+#product_detail_main #product_details .css_quantity .btn-link:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+    transform: scale(1.05);
+}
+
+#product_detail_main #product_details .css_quantity .btn-link:active {
+    transform: scale(0.98);
+    background: #e5e7eb;
+}
+
+#product_detail_main #product_details .css_quantity .btn-link i {
+    pointer-events: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+#product_detail_main #product_details .css_quantity .form-control.quantity {
+    width: 70px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    padding: 0.5rem 0.25rem;
+    margin: 0;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#product_detail_main #product_details .css_quantity .form-control.quantity::-webkit-outer-spin-button,
+#product_detail_main #product_details .css_quantity .form-control.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#product_detail_main #product_details .css_quantity .form-control.quantity:focus {
+    outline: none;
+    box-shadow: none;
+    background: #f9fafb;
+    border-radius: 4px;
+}
+
+/* Add to Cart Button - Brand primary color with hover transition */
+#product_detail_main #product_details #add_to_cart {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 2rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(123, 63, 148, 0.2);
+}
+
+#product_detail_main #product_details #add_to_cart:hover {
+    background: #06b400;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 226, 30, 0.356);
+}
+
+#product_detail_main #product_details #add_to_cart:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(123, 63, 148, 0.25);
+    background: #15ff0067;
+}
+
+#product_detail_main #product_details #add_to_cart .fa,
+#product_detail_main #product_details #add_to_cart i.fa {
+    margin-right: 0.625rem;
+    font-size: 1rem;
+}
+
+/* Supporting Text Section - Terms, Conditions, Shipping Info */
+#product_detail_main #product_details .oe_structure {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+#product_detail_main #product_details .text-muted,
+#product_detail_main #product_details .small,
+#product_detail_main #product_details small {
+    font-size: 0.8125rem;
+    color: #9ca3af;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#product_detail_main #product_details a.text-muted,
+#product_detail_main #product_details a.small {
+    color: #3b82f6;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+#product_detail_main #product_details a.text-muted:hover,
+#product_detail_main #product_details a.small:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Social Share Icons */
+#product_detail_main #product_details .o_share_links,
+#product_detail_main #product_details .social_share {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#product_detail_main #product_details .o_share_links a,
+#product_detail_main #product_details .social_share a {
+    width: 40px;
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+#product_detail_main #product_details .o_share_links a:hover,
+#product_detail_main #product_details .social_share a:hover {
+    background: #e5e7eb;
+    color: #1f2937;
+    transform: translateY(-2px);
+}
+
+/* Product Description */
+#product_detail_main #product_details .oe_structure {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Rating Widget */
+#product_detail_main #product_details .o_product_page_reviews_link {
+    margin-bottom: 1.25rem;
+    display: inline-block;
+}
+
+/* Responsive Adjustments for Product Details */
+@media (max-width: 991px) {
+    #product_detail_main #product_details {
+        padding-left: 0;
+        padding-top: 2rem;
+        align-items: center;
+    }
+
+    #product_detail_main #product_details h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #product_detail_main #product_details .product_price {
+        text-align: center;
+    }
+
+    #product_detail_main #product_details .product_price .oe_price {
+        font-size: 2.25rem;
+    }
+
+    #product_detail_main #product_details #add_to_cart_wrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #product_detail_main #product_details .css_quantity {
+        width: auto;
+        justify-content: center;
+    }
+
+    #product_detail_main #product_details #add_to_cart {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    #product_detail_main #product_details .o_share_links,
+    #product_detail_main #product_details .social_share {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    #product_detail_main #product_details {
+        align-items: stretch;
+    }
+
+    #product_detail_main #product_details h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    #product_detail_main #product_details .product_price {
+        text-align: center;
+    }
+
+    #product_detail_main #product_details .product_price .oe_price {
+        font-size: 2rem;
+    }
+
+    #product_detail_main #product_details #add_to_cart_wrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    #product_detail_main #product_details .css_quantity {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #product_detail_main #product_details .css_quantity .btn-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    #product_detail_main #product_details .css_quantity .form-control.quantity {
+        width: 60px;
+        font-size: 1rem;
+    }
+
+    #product_detail_main #product_details #add_to_cart {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+

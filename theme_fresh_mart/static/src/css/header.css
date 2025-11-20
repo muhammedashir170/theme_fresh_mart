@@ -1,0 +1,2003 @@
+/*  freshmart Header Styles*/
+
+/* Hide default Odoo header elements */
+header .o_main_header > div:not(.freshmart-custom-header-wrapper),
+header .navbar:not(.main-menu),
+header .o_main_navbar:not(.main-menu) {
+    display: none !important;
+}
+
+/* Show our custom header */
+.freshmart-custom-header-wrapper {
+    display: block !important;
+    position: relative;
+    overflow: visible !important;
+    z-index: 1000;
+}
+
+/* Header Container */
+header.freshmart-header,
+header {
+    padding: 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    overflow: visible !important;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Reduce header row padding */
+.freshmart-custom-header-wrapper .row.py-3 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+}
+
+/* Reduce navigation menu row padding */
+.freshmart-custom-header-wrapper .container-fluid .row.py-3 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* Desktop Layout - Large screens */
+@media (min-width: 992px) {
+    .header-main-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+
+    
+    .header-search-section {
+        flex: 1 1 auto;
+        padding: 0 1rem;
+    }
+    
+    .header-right-section {
+        flex: 0 0 auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+    
+    /* Desktop search bar - keep original styling */
+    .search-bar-mobile {
+        background: #f3f4f6;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.375rem 0.5rem;
+    }
+    
+    .freshmart-search-input-mobile {
+        font-size: 0.875rem !important;
+    }
+    
+    .freshmart-search-button-mobile .oi-search,
+    .freshmart-search-button-mobile i,
+    .freshmart-search-button-mobile svg {
+        color: #6b7280 !important;
+    }
+}
+
+/* Logo icon spacing */
+.header-logo-section {
+    padding-left: clamp(2rem, 5vw, 3.75rem);
+}
+
+/* Mobile logo spacing */
+@media (max-width: 991px) {
+    .header-logo-section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .header-logo-section .main-logo {
+        padding-left: 0.5rem;
+    }
+
+ 
+    /* Override container padding on mobile */
+    .freshmart-custom-header-wrapper .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+
+/* Header Row - Main header section */
+header.freshmart-header .container-fluid,
+header.freshmart-header .container {
+    max-width: 1600px;
+    overflow: visible !important;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Style the main navbar container */
+header.freshmart-header .navbar,
+header.freshmart-header .o_main_navbar,
+header.freshmart-header .o_header_standard {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+    overflow: visible !important;
+    z-index: 1000;
+}
+
+/* Main menu - allow dropdown overflow */
+.main-menu,
+.main-menu .navbar,
+.main-menu .navbar-collapse,
+.main-menu .navbar-nav {
+    overflow: visible !important;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Main Logo - Target Odoo's logo elements */
+header.freshmart-header .navbar-brand,
+header.freshmart-header .o_logo,
+header.freshmart-header .main-logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+header.freshmart-header .navbar-brand a,
+header.freshmart-header .o_logo a,
+header.freshmart-header .main-logo a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header.freshmart-header .navbar-brand img,
+header.freshmart-header .o_logo img,
+header.freshmart-header .main-logo img {
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Logo Container - New Mobile Design */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.logo-title-accent {
+    color: #FF8C00;
+}
+
+.logo-subtitle {
+    font-size: 0.625rem;
+    font-weight: 500;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin-top: 2px;
+}
+
+/* Search Bar - Style Odoo's search form */
+header.freshmart-header .o_wsale_products_searchbar_form,
+header.freshmart-header .search-bar {
+    background: #f3f4f6;
+    padding: 0.375rem 0.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+/* Mobile Search Bar Container */
+.search-bar-mobile {
+    width: 100%;
+    position: relative;
+}
+
+header.freshmart-header .o_wsale_products_searchbar_form .form-select,
+header.freshmart-header .search-bar .form-select {
+    border: none;
+    background: transparent;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+header.freshmart-header .o_wsale_products_searchbar_form .form-control,
+header.freshmart-header .search-bar .form-control {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    flex: 1;
+}
+
+header.freshmart-header .o_wsale_products_searchbar_form .form-control:focus,
+header.freshmart-header .search-bar .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+header.freshmart-header .o_wsale_products_searchbar_form .btn,
+header.freshmart-header .search-bar .btn {
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.freshmart-header .o_wsale_products_searchbar_form svg,
+header.freshmart-header .search-bar svg {
+    width: 24px;
+    height: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Support Box - Customer support contact information */
+.support-box {
+    text-align: right;
+}
+
+.support-box .fs-6 {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: block;
+}
+
+.support-box h5 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+    line-height: 1.3;
+}
+
+/* Icon Buttons (User, Wishlist, etc.) - Style Odoo's user menu and cart */
+header.freshmart-header .navbar-nav,
+header.freshmart-header ul.list-unstyled,
+header.freshmart-header .o_user_menu,
+/* Dropdown - only for icon buttons, not navigation dropdowns */
+header.freshmart-header .header-icon-item.dropdown,
+header.freshmart-header .header-user-item.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Navigation dropdown - normal list item */
+header.freshmart-header .navbar-nav .nav-item.dropdown {
+    display: list-item;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: visible !important;
+    z-index: 1050;
+}
+
+header.freshmart-header .navbar-nav li,
+header.freshmart-header ul.list-unstyled li {
+    margin: 0;
+}
+
+/* Icon buttons - exclude navigation dropdown toggles */
+header.freshmart-header .navbar-nav a:not(.dropdown-toggle),
+header.freshmart-header .o_user_menu > a,
+header.freshmart-header .header-icon-btn.dropdown-toggle,
+header.freshmart-header ul.list-unstyled li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    padding: 0.5rem;
+    color: #222;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+header.freshmart-header .navbar-nav a:not(.dropdown-toggle):hover,
+header.freshmart-header .o_user_menu > a:hover,
+header.freshmart-header .header-icon-btn.dropdown-toggle:hover,
+header.freshmart-header ul.list-unstyled li a:hover {
+    background: #e5e7eb;
+    color: #222;
+    text-decoration: none;
+}
+
+/* Navigation dropdown toggle - normal nav link style */
+header.freshmart-header .navbar-nav .nav-link.dropdown-toggle {
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0.5rem 1rem !important;
+    color: #222 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    border: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+header.freshmart-header .navbar-nav .nav-link.dropdown-toggle:hover {
+    background: transparent !important;
+    color: #C8DE00 !important;
+    text-decoration: none !important;
+}
+
+/* Dropdown arrow indicator for navigation */
+header.freshmart-header .navbar-nav .nav-link.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    transition: transform 0.2s ease;
+}
+
+header.freshmart-header .navbar-nav .nav-link.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+header.freshmart-header .navbar-nav a svg,
+header.freshmart-header .o_user_menu > a svg,
+header.freshmart-header ul.list-unstyled li a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Offer Zone Sticker */
+.offer-zone-box {
+    position: relative;
+}
+
+.offer-zone-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.1rem;
+    border-radius: 0.75rem;
+    isolation: isolate;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    animation: offerShiver 4s ease-in-out infinite;
+}
+
+.offer-zone-btn::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 1.1rem;
+    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.55), rgba(255, 140, 0, 0.2) 55%, transparent 80%);
+    opacity: 0.8;
+    z-index: -1;
+    animation: offerHalo 2.4s ease-out infinite;
+}
+
+.offer-zone-btn::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 1px rgba(255, 124, 1, 0.2);
+    opacity: 0;
+    z-index: -2;
+    animation: offerRing 2.4s ease-out infinite 0.25s;
+}
+
+.offer-zone-btn:hover,
+.offer-zone-btn:focus {
+    text-decoration: none;
+    transform: translateY(-1px) scale(1.02);
+    filter: drop-shadow(0 6px 18px rgba(255, 124, 1, 0.35));
+}
+
+.offer-zone-btn:hover::after,
+.offer-zone-btn:focus::after {
+    opacity: 0.75;
+}
+
+.offer-zone-sticker {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.45rem 0.9rem 0.55rem;
+    border-radius: 0.85rem;
+    background: linear-gradient(135deg, #ff8c37, #ffcf57 50%, #f45d01 115%);
+    background-size: 200% 200%;
+    box-shadow: 0 10px 18px rgba(244, 93, 1, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    min-width: 108px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: offerPulse 2s ease-in-out infinite, offerGradientShift 7s ease-in-out infinite;
+}
+
+.offer-zone-sticker::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.45), transparent 35%);
+    opacity: 0.7;
+    mix-blend-mode: screen;
+    animation: offerShimmer 4s linear infinite;
+}
+
+.offer-zone-sticker::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: conic-gradient(from 180deg at 50% 50%, rgba(255, 255, 255, 0.08), transparent, rgba(255, 255, 255, 0.12));
+    animation: offerGlowSweep 7s linear infinite;
+    opacity: 0.25;
+}
+
+.offer-zone-text {
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    display: inline-flex;
+    padding: 0.15rem 0.55rem;
+    border-radius: 0.45rem;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    animation: offerTextFloat 4s ease-in-out infinite;
+}
+
+.offer-zone-text-top {
+    background: rgba(255, 255, 255, 0.98);
+    color: #0f172a;
+    font-size: 0.8rem;
+    margin-bottom: 0.05rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.offer-zone-text-bottom {
+    background: rgba(5, 18, 46, 0.94);
+    color: #ffe78a;
+    font-size: 0.9rem;
+    letter-spacing: 0.22em;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes offerPulse {
+    0% { transform: translateY(0) scale(1); box-shadow: 0 10px 18px rgba(244, 93, 1, 0.35); }
+    40% { transform: translateY(-4px) scale(1.03); box-shadow: 0 18px 30px rgba(244, 93, 1, 0.5); }
+    60% { transform: translateY(-6px) scale(1.04); box-shadow: 0 20px 35px rgba(244, 93, 1, 0.55); }
+    100% { transform: translateY(0) scale(1); box-shadow: 0 10px 18px rgba(244, 93, 1, 0.35); }
+}
+
+@keyframes offerGradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes offerHalo {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    60% { transform: scale(1.05); opacity: 0.35; }
+    100% { transform: scale(1.12); opacity: 0; }
+}
+
+@keyframes offerRing {
+    0% { transform: scale(0.85); opacity: 0.35; }
+    55% { transform: scale(1.03); opacity: 0.2; }
+    100% { transform: scale(1.12); opacity: 0; }
+}
+
+@keyframes offerShimmer {
+    0% { transform: translateX(-25%); opacity: 0.4; }
+    50% { opacity: 0.65; }
+    100% { transform: translateX(25%); opacity: 0.4; }
+}
+
+@keyframes offerGlowSweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes offerShiver {
+    0%, 90%, 100% { transform: translate3d(0,0,0) rotate(0deg); }
+    91% { transform: translate3d(1.2px, -0.8px, 0) rotate(-0.7deg); }
+    93% { transform: translate3d(-1.6px, 1px, 0) rotate(0.8deg); }
+    95% { transform: translate3d(1px, -1.2px, 0) rotate(-0.5deg); }
+    97% { transform: translate3d(-0.8px, 0.6px, 0) rotate(0.6deg); }
+}
+
+@keyframes offerTextFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
+
+/* Cart Section - Style Odoo's cart */
+header.freshmart-header .o_cart,
+header.freshmart-header .my_cart_quantity_parent,
+header.freshmart-header .cart {
+    text-align: right;
+    position: relative;
+}
+
+header.freshmart-header .o_cart button,
+header.freshmart-header .o_cart a,
+header.freshmart-header .cart button,
+header.freshmart-header .cart a {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    line-height: 1.2;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+header.freshmart-header .o_cart .fs-6,
+header.freshmart-header .cart .fs-6 {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+header.freshmart-header .o_cart .cart-total,
+header.freshmart-header .cart .cart-total,
+header.freshmart-header .o_cart .my_cart_quantity {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================
+   Mobile-first responsive design approach.
+   Breakpoints: XS (<576px), SM (≥576px), MD (≥768px), LG (≥992px), XL (≥1200px)
+   ============================================ */
+
+/* Extra Large Screens (XL) - 1200px and up */
+@media (min-width: 1200px) {
+    .support-box {
+        display: block !important;
+    }
+}
+
+/* Large Screens (LG) - 992px to 1199px */
+@media (max-width: 1199px) {
+    .support-box {
+        display: none !important;
+    }
+}
+
+/* Medium Screens (MD) - 768px to 991px */
+@media (max-width: 991px) {
+    /* Hide search bar on tablet and mobile */
+    .search-bar-container,
+    .search-bar {
+        display: none !important;
+    }
+
+    /* Adjust header right section layout */
+    .header-right-section {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    /* Adjust header icons list spacing */
+    .header-icons-list {
+        gap: 0.5rem;
+    }
+
+    /* Make sign-in button smaller on mobile */
+    .header-signin-btn {
+        font-size: 0.8125rem;
+        padding: 0.4375rem 0.875rem;
+        margin-left: 0.25rem;
+    }
+
+    /* Icon buttons remain same size on tablet */
+    .header-icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small Screens (SM) - 576px to 768px */
+@media (max-width: 768px) {
+    .freshmart-custom-header-wrapper .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        position: relative;
+    }
+
+    .header-main-row > [class*="col"] {
+        padding-left: 0 !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Header row - single row layout for mobile */
+    .freshmart-custom-header-wrapper .header-main-row,
+    .header-main-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 0.75rem 1.25rem 0.75rem 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        gap: 0.5rem;
+    }
+
+    /* Logo section - left aligned, compact */
+    .freshmart-custom-header-wrapper .header-logo-section {
+        flex: 0 0 auto;
+        width: auto;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .header-logo-section {
+        flex: 0 1 auto;
+        padding: 0;
+        margin: 0;
+        max-width: none;
+        min-width: 0;
+        overflow: visible;
+    }
+
+    .logo-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header-logo-section .main-logo img,
+    .header-logo-section .navbar-brand img {
+        max-height: 28px !important;
+        width: auto !important;
+    }
+
+    .logo-title {
+        font-size: 1rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.5rem;
+    }
+
+    .logo-container {
+        gap: 0.5rem;
+    }
+
+    /* Search bar section - hide on mobile, show search icon instead */
+    .header-search-section {
+        display: none;
+    }
+
+    /* Mobile search bar container - positioned below header */
+    .mobile-search-bar-container {
+        position: absolute;
+        top: 100%;
+        left: 1rem;
+        right: 1rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 0.75rem;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 8px 8px;
+        max-width: calc(100% - 2rem);
+    }
+
+    .mobile-search-bar-container .search-bar-mobile-mobile {
+        background: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .freshmart-search-input-mobile {
+        flex: 1;
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        font-size: 0.875rem !important;
+        color: #1f2937 !important;
+        outline: none !important;
+        box-shadow: none !important;
+        min-width: 0;
+    }
+
+    .freshmart-search-input-mobile::placeholder {
+        color: #9ca3af !important;
+    }
+
+    .freshmart-search-button-mobile {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin-left: 0.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+    }
+
+    .freshmart-search-button-mobile:hover,
+    .freshmart-search-button-mobile:focus {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Magnifying glass icon - black, on the right */
+    .freshmart-search-button-mobile .oi-search,
+    .freshmart-search-button-mobile i,
+    .freshmart-search-button-mobile svg {
+        color: #000000 !important;
+        font-size: 18px !important;
+        width: 18px !important;
+        height: 18px !important;
+        stroke: #000000 !important;
+        fill: none !important;
+    }
+
+    /* Hide the custom SVG search icon if using FontAwesome */
+    .freshmart-search-button-mobile::after {
+        display: none !important;
+    }
+
+    /* Right section - icons only, no support box */
+    .freshmart-custom-header-wrapper .header-right-section {
+        flex: 0 0 auto;
+        width: auto;
+        padding-right: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .header-right-section {
+        flex: 0 0 auto;
+        padding: 0 1.5rem 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    /* Header icons - horizontal row, black outline style */
+    .header-icons-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .header-user-item {
+        padding-right: 0.75rem;
+    }
+
+    /* Support box - hidden on mobile */
+    .support-box {
+        display: none !important;
+    }
+
+    /* Mobile icon buttons - black outline style */
+    .mobile-icon-btn {
+        width: auto !important;
+        height: auto !important;
+        min-width: auto !important;
+        min-height: auto !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0.5rem !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .mobile-icon-btn svg {
+        width: 24px;
+        height: 24px;
+        stroke: #000000;
+        fill: none;
+        stroke-width: 2;
+    }
+
+    .mobile-icon-btn:hover {
+        background: transparent !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .mobile-icon-btn:focus {
+        outline: 2px solid #000000;
+        outline-offset: 2px;
+    }
+
+    .mobile-icon-btn i {
+        color: #000000;
+        font-size: 20px;
+    }
+
+    /* Cart icon styling - black outline */
+    .header-cart-btn.mobile-icon-btn svg,
+    .header-cart-btn.mobile-icon-btn i {
+        color: #000000 !important;
+        stroke: #000000 !important;
+        fill: none !important;
+    }
+
+    /* Ensure cart icon is black outline on mobile */
+    .header-cart-btn.mobile-icon-btn .fa-shopping-cart {
+        color: #000000 !important;
+    }
+
+    /* Cart badge - ensure visibility on mobile */
+    .header-cart-btn.mobile-icon-btn .cart-badge,
+    .header-cart-btn.mobile-icon-btn .my_cart_quantity {
+        background-color: #fbbf24 !important;
+        color: #1f2937 !important;
+        border: 2px solid #ffffff !important;
+        top: -4px !important;
+        right: -4px !important;
+    }
+
+    /* User icon styling - black outline */
+    .header-user-btn.mobile-icon-btn svg,
+    .header-user-btn.mobile-icon-btn i {
+        color: #000000 !important;
+        stroke: #000000 !important;
+        fill: none !important;
+    }
+
+    /* Search toggle icon - black outline */
+    .mobile-search-toggle svg {
+        stroke: #000000 !important;
+        fill: none !important;
+    }
+
+    /* Search toggle active state */
+    .mobile-search-toggle.active {
+        background-color: #f3f4f6 !important;
+    }
+
+    /* Hamburger menu icon - black outline */
+    .mobile-menu-toggle svg {
+        stroke: #000000 !important;
+        fill: none !important;
+    }
+
+    /* Hide sign-in button on mobile */
+    .header-signin-btn {
+        display: none !important;
+    }
+}
+
+/* Extra Small Screens (XS) - below 576px */
+@media (max-width: 575px) {
+    /* Reduce header padding */
+    .header-main-row {
+        padding: 0.625rem 1rem 0.625rem 0 !important;
+        gap: 0.5rem;
+        justify-content: space-between;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .header-main-row > [class*="col"] {
+        padding-left: 0 !important;
+        padding-right: 0.5rem !important;
+    }
+
+    /* Smaller logo on very small screens */
+    .header-logo-section {
+        max-width: none;
+        padding-left: 0;
+        flex: 0 1 auto;
+    }
+
+    .logo-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header-logo-section .main-logo img,
+    .header-logo-section .navbar-brand img {
+        max-height: 24px !important;
+    }
+
+    /* Compact header icons */
+    .header-icons-list {
+        gap: 0.5rem;
+    }
+
+    .header-user-item {
+        padding-right: 0.75rem;
+    }
+
+    .mobile-icon-btn {
+        padding: 0.375rem !important;
+    }
+
+    .mobile-icon-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mobile-icon-btn i {
+        font-size: 18px;
+    }
+
+    /* Adjust cart badge size */
+    .cart-badge,
+    .my_cart_quantity {
+        min-width: 16px;
+        height: 16px;
+        font-size: 10px;
+        line-height: 16px;
+        top: -2px;
+        right: -2px;
+        padding: 0 4px;
+    }
+
+    /* Mobile search bar adjustments - even smaller on very small screens */
+    .mobile-search-bar-container {
+        left: 0.75rem;
+        right: 0.75rem;
+        padding: 0.625rem;
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .mobile-search-bar-container .search-bar-mobile-mobile {
+        padding: 0.5rem 0.625rem;
+    }
+
+    .mobile-search-bar-container .freshmart-search-input-mobile {
+        font-size: 0.8125rem !important;
+    }
+
+    .mobile-search-bar-container .freshmart-search-button-mobile .oi-search,
+    .mobile-search-bar-container .freshmart-search-button-mobile i,
+    .mobile-search-bar-container .freshmart-search-button-mobile svg {
+        font-size: 16px !important;
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* Mobile autocomplete - even more compact on very small screens */
+    .mobile-search-bar-container .o_dropdown_menu {
+        max-height: 200px !important;
+    }
+
+    .mobile-search-bar-container .o_image_64_contain {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .mobile-search-bar-container .o_search_result_item_detail .h6 {
+        font-size: 0.75rem !important;
+    }
+
+    .mobile-search-bar-container .o_search_result_item_detail p {
+        font-size: 0.625rem !important;
+    }
+
+    .mobile-search-bar-container .o_search_result_item > div:last-child b {
+        font-size: 0.8125rem !important;
+    }
+}
+
+/* ============================================
+   Odoo Framework Overrides
+   ============================================
+   Overrides default Odoo header styles to work with custom freshmart design
+   ============================================ */
+
+header.freshmart-header .o_main_header .navbar,
+header.freshmart-header .o_main_header .navbar-nav {
+    background: transparent;
+}
+
+header.freshmart-header .o_main_header .oe_top_menu,
+header.freshmart-header .o_main_header .o_main_navbar {
+    background: transparent;
+}
+
+/* Dropdown menu - Standard Design */
+.dropdown-menu {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+/* Navigation dropdown menu - specific styling */
+header.freshmart-header .navbar-nav .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    margin-top: 0.25rem !important;
+    min-width: 180px !important;
+    z-index: 1050 !important;
+    display: none !important;
+    list-style: none !important;
+    padding: 0.5rem 0 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    overflow: visible !important;
+}
+
+/* Show dropdown when parent has show class (Bootstrap) */
+header.freshmart-header .navbar-nav .nav-item.dropdown.show .dropdown-menu,
+header.freshmart-header .navbar-nav .nav-item.dropdown[aria-expanded="true"] .dropdown-menu {
+    display: block !important;
+}
+
+/* Ensure dropdown items are properly styled */
+header.freshmart-header .navbar-nav .dropdown-menu li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+header.freshmart-header .navbar-nav .dropdown-menu .dropdown-item {
+    display: block !important;
+    padding: 0.625rem 1rem !important;
+    color: #374151 !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+header.freshmart-header .navbar-nav .dropdown-menu .dropdown-item:hover,
+header.freshmart-header .navbar-nav .dropdown-menu .dropdown-item:focus {
+    background-color: #f9fafb !important;
+    color: #111827 !important;
+}
+
+.dropdown-item {
+    padding: 0.625rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.15s ease;
+    color: #374151;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.dropdown-item i {
+    width: 16px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.dropdown-divider {
+    margin: 0.5rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Navbar toggle button for mobile */
+.navbar-toggler {
+    border: 1px solid #e5e7eb;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Align header elements properly */
+header.freshmart-header .d-flex.justify-content-end {
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Layout adjustments for header structure */
+header.freshmart-header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header.freshmart-header .navbar-collapse {
+    flex-grow: 0;
+}
+
+/* Reorganize header layout to match freshmart design */
+header.freshmart-header .container,
+header.freshmart-header .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Header main row layout */
+header.freshmart-header > .container > .row,
+header.freshmart-header > .container-fluid > .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo section - left side */
+header.freshmart-header .navbar-brand,
+header.freshmart-header .o_logo {
+    order: 1;
+    flex: 0 0 auto;
+    margin-right: auto;
+}
+
+/* Search section - center (on large screens) */
+header.freshmart-header .o_wsale_products_searchbar_form {
+    order: 2;
+    flex: 1 1 auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Search bar responsive behavior handled above in media queries */
+
+/* Right side section - support, icons, cart */
+header.freshmart-header .navbar-nav,
+header.freshmart-header .o_user_menu,
+header.freshmart-header .o_cart {
+    order: 3;
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* Additional utility classes */
+header.freshmart-header .rounded-circle {
+    border-radius: 50% !important;
+}
+
+header.freshmart-header .bg-light {
+    background-color: #f3f4f6 !important;
+}
+
+/*
+   Header Actions
+
+/* Header Actions Wrapper */
+.header-actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+/* Header Icons List - Standard Design */
+.header-icons-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.header-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Standard Icon Button Design */
+.header-icon-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 1 !important;
+    vertical-align: middle;
+}
+
+.header-icon-btn:hover,
+.header-icon-btn:focus {
+    background-color: #ffffff;
+    border-color: #d1d5db;
+    color: #111827;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.header-icon-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Styles inside buttons */
+.header-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    fill: none;
+    stroke: currentColor;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.header-icon-btn i {
+    font-size: 18px;
+    line-height: 1;
+    color: inherit;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cart Button Specific - Perfect Centering */
+.header-cart-btn {
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+}
+
+/* FontAwesome cart icon perfect centering */
+.header-cart-btn .fa-shopping-cart,
+.header-cart-btn .fa,
+.header-cart-btn i {
+    font-size: 18px !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure cart icon wrapper is centered - consolidated with below */
+
+/* Cart Badge - Yellow Design */
+.cart-badge,
+.my_cart_quantity,
+.my_cart_quantity.badge,
+.my_cart_quantity.bg-primary,
+.header-cart-btn .my_cart_quantity,
+.header-cart-btn .my_cart_quantity.badge,
+.header-cart-btn .my_cart_quantity.bg-primary,
+.o_wsale_my_cart .my_cart_quantity,
+.o_wsale_my_cart .my_cart_quantity.badge,
+.o_wsale_my_cart .my_cart_quantity.bg-primary,
+header .my_cart_quantity,
+header .my_cart_quantity.badge,
+header .my_cart_quantity.bg-primary {
+    top: -4px !important;
+    right: -4px !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    padding: 0 5px !important;
+    background-color: #fbbf24 !important;
+    background: #fbbf24 !important;
+    color: #1f2937 !important;
+    border-radius: 9px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.cart-badge:empty,
+.my_cart_quantity:empty {
+    display: none;
+}
+
+/* User Button Specific */
+.header-user-btn {
+    width: 40px;
+    height: 40px;
+}
+
+.header-user-btn .fa-user {
+    font-size: 18px;
+}
+
+/* User Item Container */
+.header-user-item {
+    margin-left: 0.25rem;
+    padding-right: clamp(1.25rem, 3vw, 2.75rem);
+}
+
+/* Ensure Odoo-generated elements align properly */
+.header-icons-list .o_wsale_my_cart,
+.header-icons-list .o_wsale_my_cart li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.header-icons-list .o_wsale_my_cart a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* Fix any wrapper divs inside cart button - Perfect centering */
+.header-cart-btn > div,
+.header-cart-btn div[class*="d-inline"],
+.header-cart-btn div[class*="flex"],
+.header-cart-btn div[class*="icon"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+/* Ensure FontAwesome stack is centered */
+.header-cart-btn .fa-stack {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 1em !important;
+    height: 1em !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+}
+
+/* Ensure dropdown toggle doesn't have extra padding */
+.header-user-btn.dropdown-toggle::after {
+    display: none;
+}
+
+/* Align all icon items vertically */
+.header-icon-item,
+.header-icon-item > *,
+.header-icon-item .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sign In Button - Standard Design */
+.header-signin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #374151;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.header-signin-btn:hover,
+.header-signin-btn:focus {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    color: #111827;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+}
+
+.header-signin-btn:active {
+    background-color: #f3f4f6;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Header Right Section - Base Styles */
+.header-right-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+/* Ensure proper alignment of header actions */
+.header-actions-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions-wrapper .header-icons-list {
+    align-items: center;
+}
+
+/* Search Bar Container - Base Styles */
+.search-bar-container {
+    display: block;
+    position: relative;
+}
+
+/* Odoo Search Bar Form - Custom Styling */
+.freshmart-header-search,
+.o_searchbar_form.freshmart-header-search {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+.freshmart-header-search .input-group {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Search Input Styling */
+.freshmart-search-input {
+    flex: 1 !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    color: #1f2937 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.freshmart-search-input::placeholder {
+    color: #6b7280 !important;
+}
+
+.freshmart-search-input:focus {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Search Button Styling */
+.freshmart-search-button {
+    min-width: auto !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    margin-left: 8px !important;
+    border: none !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+.freshmart-search-button:hover,
+.freshmart-search-button:focus {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.freshmart-search-button .oi-search,
+.freshmart-search-button i {
+    color: #6b7280 !important;
+    font-size: 18px !important;
+}
+
+/* Hide default search button icon if using SVG */
+.freshmart-search-button .oi-search {
+    display: none !important;
+}
+
+/* Custom SVG Search Icon */
+.freshmart-search-button::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%236b7280' d='M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Ensure search bar container is relative for absolute positioning */
+.search-bar-container {
+    position: relative !important;
+}
+
+.search-bar-container .search-bar {
+    position: relative !important;
+}
+
+/* Autocomplete Dropdown Styling - Override Odoo's default positioning */
+.search-bar-container .o_dropdown_menu,
+.freshmart-header-search .o_dropdown_menu,
+.o_searchbar_form .o_dropdown_menu,
+.o_searchbar_form.freshmart-header-search .o_dropdown_menu {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1050 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* Override Odoo's fixed positioning when in header */
+.search-bar-container .o_searchbar_form .o_dropdown_menu[style*="position: fixed"] {
+    position: absolute !important;
+}
+
+/* Autocomplete Dropdown Items */
+.freshmart-header-search .o_dropdown_menu .dropdown-item {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid #f3f4f6 !important;
+    transition: background-color 0.2s ease !important;
+    text-decoration: none !important;
+    color: #1f2937 !important;
+}
+
+.freshmart-header-search .o_dropdown_menu .dropdown-item:last-child {
+    border-bottom: none !important;
+}
+
+.freshmart-header-search .o_dropdown_menu .dropdown-item:hover,
+.freshmart-header-search .o_dropdown_menu .dropdown-item:focus {
+    background-color: #f9fafb !important;
+    color: #1f2937 !important;
+}
+
+/* Search Result Item Styling */
+.freshmart-header-search .o_search_result_item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+/* Product Image in Autocomplete */
+.freshmart-header-search .o_image_64_contain {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: contain !important;
+    border-radius: 4px !important;
+    background: #f9fafb !important;
+    flex-shrink: 0 !important;
+}
+
+/* Product Details in Autocomplete */
+.freshmart-header-search .o_search_result_item_detail {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+.freshmart-header-search .o_search_result_item_detail .h6 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 4px !important;
+    color: #1f2937 !important;
+}
+
+.freshmart-header-search .o_search_result_item_detail p {
+    font-size: 12px !important;
+    color: #6b7280 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Product Price in Autocomplete */
+.freshmart-header-search .o_search_result_item > div:last-child {
+    text-align: right !important;
+    flex-shrink: 0 !important;
+}
+
+.freshmart-header-search .o_search_result_item > div:last-child b {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #059669 !important;
+}
+
+/* "All results" button in autocomplete */
+.freshmart-header-search .o_dropdown_menu .dropdown-item.text-center {
+    font-weight: 600 !important;
+    color: #3b82f6 !important;
+    border-top: 1px solid #e5e7eb !important;
+    margin-top: 4px !important;
+}
+
+.freshmart-header-search .o_dropdown_menu .dropdown-item.text-center:hover {
+    background-color: #eff6ff !important;
+    color: #2563eb !important;
+}
+
+/* No results message */
+.freshmart-header-search .o_dropdown_menu .dropdown-item-text {
+    padding: 12px 16px !important;
+    color: #6b7280 !important;
+    font-size: 14px !important;
+}
+
+/* Responsive adjustments for autocomplete */
+@media (max-width: 768px) {
+    .freshmart-header-search .o_dropdown_menu {
+        max-height: 300px !important;
+    }
+
+    .freshmart-header-search .o_image_64_contain {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .freshmart-header-search .o_search_result_item_detail .h6 {
+        font-size: 13px !important;
+    }
+
+    .freshmart-header-search .o_search_result_item > div:last-child b {
+        font-size: 14px !important;
+    }
+}
+
+/* Mobile Search Bar Autocomplete Styling */
+@media (max-width: 991px) {
+    /* Mobile search autocomplete dropdown - narrower and compact */
+    .mobile-search-bar-container .o_dropdown_menu,
+    .mobile-search-bar-container .freshmart-header-search .o_dropdown_menu,
+    .mobile-search-bar-container .o_searchbar_form .o_dropdown_menu {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0.5rem 0 !important;
+        max-height: 250px !important;
+        overflow-y: auto !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Mobile search autocomplete items - more compact */
+    .mobile-search-bar-container .o_dropdown_menu .dropdown-item {
+        padding: 0.625rem 0.75rem !important;
+        font-size: 0.8125rem !important;
+        border-bottom: 1px solid #f3f4f6 !important;
+    }
+
+    /* Mobile search result item - compact layout */
+    .mobile-search-bar-container .o_search_result_item {
+        gap: 0.625rem !important;
+        padding: 0 !important;
+    }
+
+    /* Mobile search product image - smaller */
+    .mobile-search-bar-container .o_image_64_contain {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 4px !important;
+    }
+
+    /* Mobile search product details - smaller text */
+    .mobile-search-bar-container .o_search_result_item_detail .h6 {
+        font-size: 0.8125rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 0.25rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .mobile-search-bar-container .o_search_result_item_detail p {
+        font-size: 0.6875rem !important;
+        color: #6b7280 !important;
+        margin: 0 !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Mobile search product price - smaller */
+    .mobile-search-bar-container .o_search_result_item > div:last-child b {
+        font-size: 0.875rem !important;
+        font-weight: 700 !important;
+    }
+
+    /* Mobile "All results" button - compact */
+    .mobile-search-bar-container .o_dropdown_menu .dropdown-item.text-center {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8125rem !important;
+        margin-top: 0.25rem !important;
+    }
+
+    /* Mobile no results message */
+    .mobile-search-bar-container .o_dropdown_menu .dropdown-item-text {
+        padding: 0.625rem 0.75rem !important;
+        font-size: 0.8125rem !important;
+    }
+}
+
+/*
+   Navigation Menu
+   Responsive navigation menu styles for desktop and mobile */
+
+.main-menu {
+    width: 100%;
+}
+
+.main-menu .navbar-collapse {
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .main-menu .navbar-collapse {
+        margin-top: 0;
+    }
+
+    .main-menu .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+/* Mobile Navigation Menu - Hidden by default, shown when hamburger is clicked */
+@media (max-width: 991px) {
+    #navbarNavMobile {
+        display: none !important;
+    }
+
+    #navbarNavMobile.show,
+    #navbarNavMobile.collapsing {
+        display: block !important;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    #navbarNavMobile .navbar-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #navbarNavMobile .nav-item {
+        width: 100%;
+    }
+
+    #navbarNavMobile .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: background-color 150ms ease;
+    }
+
+    #navbarNavMobile .nav-link:hover {
+        background-color: #f9fafb;
+    }
+}
+
+/*
+   User Dropdown Menu
+   Styles for user account dropdown menu with standard design*/
+.js_usermenu.dropdown-menu,
+.header-user-btn + .dropdown-menu {
+    min-width: 200px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* User Dropdown Menu Items - Standard Design */
+.js_usermenu .dropdown-item,
+.user-menu-item {
+    padding: 0.625rem 1rem;
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+}
+
+.js_usermenu .dropdown-item:hover,
+.js_usermenu .dropdown-item:focus,
+.user-menu-item:hover,
+.user-menu-item:focus {
+    background-color: #f3f4f6;
+    color: #111827;
+    text-decoration: none;
+}
+
+.js_usermenu .dropdown-item:active,
+.user-menu-item:active {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* User Dropdown Menu Item Icons */
+.js_usermenu .dropdown-item i,
+.user-menu-item i {
+    width: 18px;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-right: 0.75rem;
+    text-align: center;
+}
+
+.js_usermenu .dropdown-item:hover i,
+.js_usermenu .dropdown-item:focus i,
+.user-menu-item:hover i,
+.user-menu-item:focus i {
+    color: #374151;
+}
+
+/* User Dropdown Divider */
+.js_usermenu .dropdown-divider {
+    margin: 0.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    opacity: 1;
+}
+
+/* Logout Item - Special Styling */
+.js_usermenu #o_logout {
+    color: #dc2626;
+}
+
+.js_usermenu #o_logout:hover,
+.js_usermenu #o_logout:focus {
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+.js_usermenu #o_logout i {
+    color: #dc2626;
+}
+
+.js_usermenu #o_logout:hover i,
+.js_usermenu #o_logout:focus i {
+    color: #991b1b;
+}

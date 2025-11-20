@@ -1,0 +1,282 @@
+/* freshmart Footer Style */
+
+/* Hide default Odoo footer elements */
+.o_footer_copyright,
+#footer-bottom,
+.copyright,
+.credit-link {
+    display: none !important;
+}
+
+/* Footer Main Container */
+footer {
+    background-color: #fafafa !important;
+    color: #222222 !important;
+    
+}
+
+footer.bg-light,
+footer.o_footer,
+footer[class*="bg-"] {
+    background-color: #fafafa !important;
+}
+
+footer .container-fluid {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Footer Menu Sections */
+.footer-menu {
+    margin-bottom: 2rem;
+}
+
+.footer-menu img {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+/* Widget Title */
+.footer-menu .widget-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2f9400;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-family: "Nunito", sans-serif;
+}
+
+/* Menu Lists */
+.footer-menu .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu .menu-item {
+    margin-bottom: 0.75rem;
+}
+
+.footer-menu .menu-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Menu Links - Black color */
+.footer-menu .nav-link,
+footer .menu-list a,
+footer .menu-item a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-menu .nav-link:hover,
+footer .menu-list a:hover,
+footer .menu-item a:hover {
+    color: #FFC43F !important;
+    text-decoration: none !important;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.social-links .btn-outline-light {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #222222;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn-outline-light:hover {
+    background-color: #FFC43F;
+    border-color: #FFC43F;
+    color: #222222;
+    transform: translateY(-2px);
+}
+
+.social-links .btn-outline-light svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Newsletter Section */
+.footer-menu p {
+    color: #727272;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-menu form {
+    margin-top: 1rem;
+}
+
+.footer-menu .form-control {
+    border: 1px solid #dbdbdb;
+    background-color: #ffffff;
+    color: #222222;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+}
+
+.footer-menu .form-control::placeholder {
+    color: #9d9d9d;
+}
+
+.footer-menu .form-control:focus {
+    background-color: #ffffff;
+    border-color: #FFC43F;
+    color: #222222;
+    box-shadow: 0 0 0 0.2rem rgba(255, 196, 63, 0.25);
+}
+
+.footer-menu .btn-dark {
+    background-color: #222222;
+    border: 1px solid #222222;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-menu .btn-dark:hover {
+    background-color: #FFC43F;
+    border-color: #FFC43F;
+    color: #222222;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    footer {
+        padding: 2.5rem 0 !important;
+    }
+
+    .footer-menu {
+        margin-bottom: 2.5rem;
+    }
+
+    .footer-menu:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer {
+        padding: 2rem 0 !important;
+    }
+
+    .footer-menu {
+        margin-bottom: 2rem;
+    }
+
+    .footer-menu .widget-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-menu .nav-link {
+        font-size: 0.875rem;
+    }
+
+    .social-links {
+        margin-top: 1.5rem;
+    }
+
+    .social-links .btn-outline-light {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-links .btn-outline-light svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    footer {
+        padding: 1.5rem 0 !important;
+    }
+
+    .footer-menu {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-menu img {
+        max-height: 50px;
+    }
+
+    .footer-menu .widget-title {
+        font-size: 0.9375rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .footer-menu .menu-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-menu .nav-link {
+        font-size: 0.8125rem;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+
+    .social-links .btn-outline-light {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-links .btn-outline-light svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .footer-menu .form-control {
+        font-size: 0.875rem;
+        padding: 0.625rem 0.875rem;
+    }
+
+    .footer-menu .btn-dark {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Ensure proper spacing between columns */
+footer .row > div {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    footer .row > div {
+        margin-bottom: 0;
+    }
+}

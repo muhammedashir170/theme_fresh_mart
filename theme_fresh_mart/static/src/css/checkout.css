@@ -1,0 +1,470 @@
+/* Checkout Address Page Styles - Green Theme */
+
+/* Main Container */
+.oe_website_sale.o_wsale_address_fill {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Checkout Progress Indicator (Wizard) */
+
+.o_wizard {
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Step Labels */
+.o_wizard_steplabel {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 0.5rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Active Step */
+.o_wizard_step_active {
+    color: #16a34a !important;
+    font-weight: 600;
+}
+
+.o_wizard_step_active .o_wizard_steplabel {
+    color: #16a34a;
+}
+
+/* Completed Steps */
+.o_wizard_step-done .o_wizard_steplabel {
+    color: #1f2937;
+    transition: color 150ms ease;
+}
+
+.o_wizard_step-done:hover .o_wizard_steplabel {
+    color: #16a34a;
+}
+
+/* Disabled Steps */
+.o_disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Step Separator (Arrow) */
+.o_wizard .fa-angle-right {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    margin: 0 0.75rem;
+}
+
+/* Mobile Dropdown */
+.o_wizard .dropdown-toggle {
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+.o_wizard .dropdown-menu {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.o_wizard .dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    color: #1f2937;
+    transition: background-color 150ms ease;
+}
+
+.o_wizard .dropdown-item:hover {
+    background-color: #f0fdf4;
+    color: #1f2937;
+}
+
+/* Page Title*/
+
+.oe_cart h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.3;
+}
+
+/*  Form Fields */
+
+/* Form Container */
+.checkout_autoformat {
+    background: #ffffff;
+    padding: 0;
+}
+
+/* Form Row */
+.checkout_autoformat .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.checkout_autoformat .row > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Labels */
+.col-form-label {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.col-form-label.label-optional::after {
+    content: " (optional)";
+    font-weight: 400;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+/* Input Fields */
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    color: #1f2937;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 150ms ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:disabled,
+.form-select:disabled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Select Dropdown */
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+    appearance: none;
+}
+
+.form-select:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2316a34a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Field Spacing */
+.mb-2 {
+    margin-bottom: 1rem !important;
+}
+
+/* Error Messages */
+#errors {
+    margin-bottom: 1.5rem;
+}
+
+#errors .alert {
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #fecaca;
+    background-color: #fef2f2;
+    color: #991b1b;
+    font-size: 0.9375rem;
+}
+
+/* Warning Alert */
+.alert-warning {
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    border: 1px solid #fbbf24;
+    background-color: #fef3c7;
+    color: #92400e;
+    margin-bottom: 1.5rem;
+}
+
+.alert-warning .alert-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #78350f;
+}
+
+.alert-warning a {
+    color: #16a34a;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.alert-warning a:hover {
+    color: #15803d;
+}
+
+/* ============================================
+   Action Buttons
+   ============================================ */
+
+/* Button Container */
+.d-flex.flex-column.flex-md-row.align-items-center.justify-content-between {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+/* Discard Button (Secondary) */
+.btn-outline-secondary {
+    background: transparent;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 150ms ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.btn-outline-secondary:hover {
+    background: #f0fdf4;
+    border-color: #86efac;
+    color: #15803d;
+    text-decoration: none;
+}
+
+.btn-outline-secondary:focus {
+    outline: 2px solid #16a34a;
+    outline-offset: 2px;
+}
+
+.btn-outline-secondary i {
+    margin-right: 0.5rem;
+}
+
+/* Save Address Button (Primary) */
+#save_address.btn-primary,
+.btn-primary {
+    background: #16a34a;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 150ms ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#save_address.btn-primary:hover,
+.btn-primary:hover {
+    background: #15803d;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+#save_address.btn-primary:active,
+.btn-primary:active {
+    background: #14532d;
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+
+#save_address.btn-primary:focus,
+.btn-primary:focus {
+    outline: 2px solid #16a34a;
+    outline-offset: 2px;
+}
+
+#save_address.btn-primary:disabled,
+.btn-primary:disabled {
+    background: #d1d5db;
+    color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#save_address.btn-primary i,
+.btn-primary i {
+    margin-left: 0.5rem;
+}
+
+/* Mobile "or" Divider */
+.position-relative.w-100.d-flex.d-md-none {
+    margin: 1rem 0;
+}
+
+.position-relative.w-100.d-flex.d-md-none hr {
+    border-color: #e5e7eb;
+    margin: 0;
+}
+
+.position-relative.w-100.d-flex.d-md-none span {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    background: #ffffff;
+    padding: 0 1rem;
+}
+
+/* Anonymous Cart Email Section */
+
+#div_email_public {
+    margin-bottom: 1.5rem;
+}
+
+#div_email_public .align-items-center.float-end {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#div_email_public .align-items-center.float-end span {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-right: 0.75rem;
+}
+
+#div_email_public .btn-primary {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .oe_cart h3 {
+        font-size: 1.5rem;
+    }
+
+    .o_wizard {
+        padding: 1rem 0;
+    }
+
+    .o_wizard_steplabel {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .oe_website_sale.o_wsale_address_fill {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .oe_cart h3 {
+        font-size: 1.375rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .o_wizard {
+        margin-bottom: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    .col-form-label {
+        font-size: 0.875rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .btn-outline-secondary,
+    #save_address.btn-primary,
+    .btn-primary {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .d-flex.flex-column.flex-md-row.align-items-center.justify-content-between {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Accessibility  */
+
+/* Focus states */
+.form-control:focus-visible,
+.form-select:focus-visible,
+.btn-outline-secondary:focus-visible,
+#save_address.btn-primary:focus-visible,
+.btn-primary:focus-visible {
+    outline: 2px solid #16a34a;
+    outline-offset: 2px;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .form-control,
+    .form-select {
+        border-width: 2px;
+    }
+
+    .btn-outline-secondary,
+    #save_address.btn-primary,
+    .btn-primary {
+        border-width: 2px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .form-control,
+    .form-select,
+    .btn-outline-secondary,
+    #save_address.btn-primary,
+    .btn-primary {
+        transition: none;
+    }
+
+    #save_address.btn-primary:hover,
+    .btn-primary:hover {
+        transform: none;
+    }
+}
