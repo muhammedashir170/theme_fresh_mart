@@ -57,7 +57,7 @@
     },
 
     'images': [
-        'static/description/freshmart_cover.jpg',
+        'static/description/freshmart_cover.gif',
         'static/description/freshmart_screenshot.gif',
 
     ],
