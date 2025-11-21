@@ -181,7 +181,7 @@
 
                 <!-- Navigation Menu - Shared template for desktop and mobile -->
                 <t t-set="menu_categories"
-                   t-value="request.env['product.public.category'].search([('parent_id', '=', False)], order='sequence, name', limit=10)"/>
+                   t-value="request.env['product.public.category'].search([('parent_id', '=', False)], order='sequence, name', limit=9)"/>
 
                 <!-- Desktop Navigation Menu -->
                 <div class="container-fluid d-none d-lg-block">
@@ -288,7 +288,7 @@
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdownMobile"
                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Daily Best Sellers
+                                                Daily Best Picks
                                             </a>
 
                                             <ul class="dropdown-menu" aria-labelledby="categoriesDropdownMobile">
@@ -731,7 +731,7 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active">
                                             <t t-set="home_products"
-                                               t-value="request.env['product.template'].sudo().search([('website_published','=',True), ('sale_ok','=',True), ('active','=',True)], limit=10, order='website_sequence asc').filtered(lambda p: p.product_variant_ids)"/>
+                                               t-value="request.env['product.template'].sudo().search([('website_published','=',True), ('sale_ok','=',True), ('active','=',True)], limit=15, order='website_sequence asc').filtered(lambda p: p.product_variant_ids)"/>
                                             <div class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                                                 <t t-foreach="home_products" t-as="product">
                                                     <t t-if="product.product_variant_ids">
@@ -820,7 +820,7 @@
                                                                                       t-field="website.prevent_zero_price_sale_text"/>
                                                                             </bdi>
                                                                         </span>
-                                                                        <!-- Original Price (Strikethrough) if discounted -->
+                                                                         <!-- Original Price (Strikethrough) if discounted -->
                                                                         <span t-if="combination_info.get('has_discounted_price') and list_price_val &gt; 0"
                                                                               class="text-muted ms-2"
                                                                               style="text-decoration: line-through; white-space: nowrap; font-size: 0.9rem;">
@@ -830,11 +830,8 @@
                                                                                       t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
                                                                             </bdi>
                                                                         </span>
-                                                                        <span itemprop="price" style="display:none;"
-                                                                              t-esc="price_val"/>
-                                                                        <span itemprop="priceCurrency"
-                                                                              style="display:none;"
-                                                                              t-esc="website.currency_id.name"/>
+                                                                        <span itemprop="price" style="display:none;" t-esc="price_val" />
+                                                                        <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
                                                                     </div>
 
                                                                     <!-- Product Actions -->
@@ -892,7 +889,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
-                                <h2 class="category-description-section-title mb-4">Daily Best Sells</h2>
+                                <h2 class="category-description-section-title mb-4">Today’s Top Picks</h2>
                             </div>
                         </div>
                         <t t-set="categories_with_description"

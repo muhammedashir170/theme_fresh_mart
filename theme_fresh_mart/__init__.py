@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
+# Developed by Xapp
+
+
 """
 FreshMart Theme Module
 =====================
-
-Custom theme for Odoo eCommerce platform providing:
-- Custom header with logo, search, cart, and navigation
-- Responsive homepage with banner slider
-- Product listing and detail page enhancements
-- Shopping cart and checkout styling
+Custom theme for Odoo eCommerce platform tailored for online grocery stores and supermarkets.
 """
