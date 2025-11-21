@@ -20,6 +20,7 @@
         -
         For any questions or support, please contact.
     """,
+    'odoo_online': False,
     'license': 'OPL-1',
     'support': 'teamxapp.dev@gmail.com',
     'live_test_url': 'http://13.60.52.65:8070',
