@@ -24,7 +24,7 @@
     'license': 'OPL-1',
     'support': 'teamxapp.dev@gmail.com',
     'live_test_url': 'http://13.49.241.196:8069',
-    'price': 99.00,
+    'price': 52.00,
     'currency': 'USD',
     'depends': [
         'website',
